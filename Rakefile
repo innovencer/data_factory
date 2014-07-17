@@ -30,7 +30,10 @@ require 'open-uri'
   names = %w(champions colombia espana libertadores mexico mundial peru premierleague)
   names.each do |name|
     puts "Processing #{name}"
-    url = "http://www.datafactory.ws/clientes/xml/index.php?ppaass=Golazzos&canal=deportes.futbol.#{name}.equipos"
+    date = Time.now.strftime("%Y%m%d")
+    time =  Time.now.strftime("%H%M%S")
+    url = "http://www.datafactory.ws/clientes/xml/index.php?ppaass=Golazzos&canal=deportes.futbol.#{name}.equipos&desde=#{date}&hora=#{time}"
+    puts url
     open("lib/data_factory/data/deportes.futbol.#{name}.equipos.xml", "wb") {|file| file << open(url).read }
   end
 
