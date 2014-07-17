@@ -24,4 +24,16 @@ task :spec do
   end
 end
 
+desc "Update all the data in data_factorydata/"
+task :update_data do
+require 'open-uri'
+  names = %w(champions colombia espana libertadores mexico mundial peru premierleague)
+  names.each do |name|
+    puts "Processing #{name}"
+    url = "http://www.datafactory.ws/clientes/xml/index.php?ppaass=Golazzos&canal=deportes.futbol.#{name}.equipos"
+    open("lib/data_factory/data/deportes.futbol.#{name}.equipos.xml", "wb") {|file| file << open(url).read }
+  end
+
+end
+
 task :default => [:spec]
