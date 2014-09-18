@@ -1,6 +1,7 @@
 require "active_support/core_ext"
 require "virtus"
 require "hpricot"
+require "data_factory/configuration"
 require "data_factory/base_model"
 
 module DataFactory
