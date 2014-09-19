@@ -9,13 +9,14 @@ module DataFactory
   end
 
   class Configuration
-    attr_accessor :leagues, :url, :http, :ftp, :password
+    attr_accessor :leagues, :url, :http, :ftp, :password, :sport
     attr_reader :channels
 
     def initialize
       @channels = %w(fixture calendario posiciones goleadores ficha plantelxcampeonato)
       @http = true
       @url = "http://www.datafactory.ws/clientes/xml/index.php"
+      @sport = "futbol"
     end
 
     def http=(value)

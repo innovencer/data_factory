@@ -12,9 +12,24 @@ module DataFactory
       self.class_variable_set(:@@source_file_name, path)
     end
 
+    def self.league_name=(league_name)
+      self.class_variable_set(:@@league_name, league_name)
+    end
+
+    def self.channel_name=(channel_name)
+      self.class_variable_set(:@@channel_name, channel_name)
+    end
+
     def self.source_document
-      file_dir = File.join(File.expand_path("../data", __FILE__),  self.class_variable_get(:@@source_file_name))
-      Hpricot::XML(File.read(file_dir).force_encoding("ISO-8859-1").encode("utf-8", replace: nil))
+      DataFactory.document({ canal: self.build_channel })
+    end
+
+    private
+
+    def self.build_channel
+      channel_name = self.class_variable_get(:@@channel_name)
+      league_name = self.class_variable_get(:@@league_name)
+      "deportes.#{DataFactory.configuration.sport}.#{league_name}.#{channel_name}"
     end
   end
 end

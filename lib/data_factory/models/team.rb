@@ -10,6 +10,8 @@ module DataFactory
     attribute :nickname2, String
     attribute :national_team, Boolean
 
+    self.channel_name = "equipos"
+
     def self.fetch_all(attrs = {})
       teams = []
       (source_document/"equipo").each do |obj|

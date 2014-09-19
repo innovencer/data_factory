@@ -7,17 +7,19 @@ describe "Base" do
   end
 
   it "should set source file name" do
-    file_name = "deportes.futbol.champions.equipos.xml"
-    DataFactory::Team.source_file_name = file_name
-    DataFactory::Team.class_variable_get(:@@source_file_name).should == file_name
+    DataFactory::Team.league_name = "champions"
+    DataFactory::Team.class_variable_get(:@@league_name).should == "champions"
 
-    DataFactory::Team.source_file_name = file_name + "2"
-    DataFactory::Team.class_variable_get(:@@source_file_name).should == file_name + "2"
+    DataFactory::Team.league_name = "mexico"
+    DataFactory::Team.class_variable_get(:@@league_name).should == "mexico"
   end
 
   it "should get the source documen in order to extract the  info from files" do
-    file_name = "deportes.futbol.champions.equipos.xml"
-    DataFactory::Team.source_file_name = file_name
+    DataFactory.configure do |config|
+       config.password = "Golazzos"
+       config.http = true
+    end
+    DataFactory::Team.league_name = "champions"
     DataFactory::Team.source_document.should be_an_instance_of Hpricot::Doc
   end
 end
