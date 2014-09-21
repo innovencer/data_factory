@@ -6,4 +6,5 @@ DataFactory::Team.league_name = "champions"
 DataFactory::Team.fetch_all
 
 DataFactory::Calendar.league_name = "champions"
+DataFactory::Calendar.desde = "20140920"
 DataFactory::Calendar.fetch_all
