@@ -8,10 +8,6 @@ module DataFactory
 
     protected
 
-    def self.source_file_name=(path)
-      self.class_variable_set(:@@source_file_name, path)
-    end
-
     def self.league_name=(league_name)
       self.class_variable_set(:@@league_name, league_name)
     end
