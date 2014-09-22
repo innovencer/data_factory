@@ -3,10 +3,18 @@ module DataFactory
     attribute :id, Integer
     attribute :local, Team
     attribute :visitante, Team
-    attribute :fecha, DateTime
+    attribute :fecha, String
     attribute :hora, String
     attribute :lugar_ciudad, String
     attribute :nombre_estadio, String
     attribute :medios, Array[String]
+
+    def start_time
+      Time.parse("#{fecha} #{hora}")
+    end
+
+    def time_zone
+      "Buenos Aires"
+    end
   end
 end
