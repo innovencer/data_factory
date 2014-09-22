@@ -10,7 +10,7 @@ module DataFactory
     attribute :medios, Array[String]
 
     def start_time
-      Time.parse("#{fecha} #{hora} UTC")
+      ActiveSupport::TimeZone[time_zone].parse("#{fecha} #{hora}")
     end
 
     def time_zone
