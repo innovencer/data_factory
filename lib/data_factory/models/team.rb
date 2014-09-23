@@ -14,15 +14,15 @@ module DataFactory
 
     def self.fetch_all(attrs = {})
       teams = []
-      (source_document/"equipo").each do |obj|
+      source_document.xpath("//equipo").each do |obj|
         attrs = {
           id: obj[:id],
-          name: obj.at("nombre").inner_html,
-          complete_name: obj.at("nombreCompleto").inner_html,
-          foundation_date: obj.at("fechaFundacion").inner_html,
+          name: obj.at("nombre").text,
+          complete_name: obj.at("nombreCompleto").text,
+          foundation_date: obj.at("fechaFundacion").text,
           country_name: obj["paisNombre"],
-          nickname1: obj.at("apodo").inner_html,
-          nickname2: obj.at("apodo").inner_html,
+          nickname1: obj.at("apodo").text,
+          nickname2: obj.at("apodo").text,
           national_team: attrs[:national_team]
         }
         teams << self.new(attrs)

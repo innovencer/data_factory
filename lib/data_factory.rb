@@ -1,6 +1,6 @@
 require "active_support/core_ext"
 require "virtus"
-require "hpricot"
+require "nokogiri"
 require "data_factory/configuration"
 require "data_factory/base_model"
 

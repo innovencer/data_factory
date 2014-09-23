@@ -40,7 +40,7 @@ describe "Connection" do
         config.http = true
        end
        attrs = {canal: "deportes.futbol.colombia.equipos"}
-       expect(DataFactory.document(attrs)).to be_an_instance_of(Hpricot::Doc)
+       expect(DataFactory.document(attrs)).to be_an_instance_of(Nokogiri::XML::Document)
     end
   end
 end

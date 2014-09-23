@@ -20,6 +20,6 @@ describe "Base" do
        config.http = true
     end
     DataFactory::Team.league_name = "champions"
-    DataFactory::Team.source_document.should be_an_instance_of Hpricot::Doc
+    DataFactory::Team.source_document.should be_an_instance_of Nokogiri::XML::Document
   end
 end

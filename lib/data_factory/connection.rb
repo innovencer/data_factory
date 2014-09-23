@@ -11,7 +11,7 @@ module DataFactory
     end
 
     def http_connection(attrs)
-      open(http_url(attrs)) { |f| Hpricot::XML(f.read.force_encoding("ISO-8859-1").encode("utf-8", replace: nil)) }
+      open(http_url(attrs)) { |f| Nokogiri::XML.parse(f.read.force_encoding("ISO-8859-1").encode("utf-8", replace: nil)) }
     end
 
     def ftp_connection

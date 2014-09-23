@@ -8,7 +8,7 @@ module DataFactory
     self.channel_name = "calendario"
     def self.fetch_all
       matches = []
-      (source_document/"campeonato").first[:id]
+      source_document.xpath("//campeonato").first[:id]
       tournament = load_tournament
       matches = load_matches
 
@@ -19,7 +19,7 @@ module DataFactory
 
     def self.load_matches
       matches = []
-      (source_document/"partido").each do |match|
+      source_document.xpath("//partido").each do |match|
         attrs = {
           id: match[:id],
           local: load_team(match.at("local")),
@@ -39,12 +39,12 @@ module DataFactory
     def self.load_team(document)
       Team.new(
         id: document[:id],
-        name: document.inner_html
+        name: document.text
       )
     end
 
     def self.load_tournament
-      Tournament.new(id: (source_document/"campeonato").first[:id], name: (source_document/"campeonato").inner_html)
+      Tournament.new(id: source_document.xpath("//campeonato").first[:id], name: source_document.xpath("//campeonato").text)
     end
   end
 end

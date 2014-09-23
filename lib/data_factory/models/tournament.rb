@@ -4,10 +4,10 @@ module DataFactory
     attribute :name, String
 
     def self.fetch
-      document = (source_document/"plantelEquipo")
+      document = source_document.xpath("//plantelEquipo")
       attrs = {
         id: document.at("campeonatoNombreAlternativo")[:id],
-        name: document.at("campeonatoNombreAlternativo").inner_html
+        name: document.at("campeonatoNombreAlternativo").text
       }
 
       self.new(attrs)

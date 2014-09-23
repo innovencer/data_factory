@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency "shoulda-matchers"
 
-  spec.add_runtime_dependency "hpricot"
+  spec.add_runtime_dependency "nokogiri"
   spec.add_runtime_dependency "virtus"
   spec.add_runtime_dependency "activesupport", "~> 4.1"
 end
