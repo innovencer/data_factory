@@ -7,3 +7,6 @@ DataFactory::Team.fetch_all
 
 DataFactory::Calendar.league_name = "espana"
 DataFactory::Calendar.fetch_all
+
+DataFactory::Fixture.league_name = "champions"
+DataFactory::Fixture.fetch_all

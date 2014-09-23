@@ -10,7 +10,7 @@ module DataFactory
     attribute :nickname2, String
     attribute :national_team, Boolean
 
-    self.channel_name = "equipos"
+    self.channel_type = "equipos"
 
     def self.fetch_all(attrs = {})
       teams = []

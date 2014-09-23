@@ -11,7 +11,7 @@ module DataFactory
     end
 
     def http_connection(attrs)
-      open(http_url(attrs)) { |f| Nokogiri::XML.parse(f.read.force_encoding("ISO-8859-1").encode("utf-8", replace: nil)) }
+      Nokogiri::XML.parse(open(http_url(attrs)))
     end
 
     def ftp_connection

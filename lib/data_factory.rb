@@ -7,7 +7,8 @@ require "data_factory/base_model"
 module DataFactory
   autoload :Connection, "data_factory/connection"
   autoload :Calendar, "data_factory/models/calendar"
-  autoload :Match, "data_factory/models/Match"
+  autoload :Fixture, "data_factory/models/fixture"
+  autoload :Match, "data_factory/models/match"
   autoload :Team, "data_factory/models/team"
   autoload :Tournament, "data_factory/models/tournament"
 

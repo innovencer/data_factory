@@ -5,7 +5,7 @@ module DataFactory
     attribute :tournament, Tournament
     attribute :matches, Array[Match]
 
-    self.channel_name = "calendario"
+    self.channel_type = "calendario"
     def self.fetch_all
       matches = []
       source_document.xpath("//campeonato").first[:id]
