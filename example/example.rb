@@ -10,3 +10,6 @@ DataFactory::Calendar.fetch_all
 
 DataFactory::Fixture.league_name = "champions"
 DataFactory::Fixture.fetch_all
+
+DataFactory::Ficha.channel_name = "deportes.futbol.mexico.ficha.201320"
+DataFactory::Ficha.fetch
