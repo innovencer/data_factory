@@ -19,7 +19,7 @@ module DataFactory
     attribute :match, Match
     attribute :incidences, Array[Incidence]
 
-    def self.fecth
+    def self.fetch
       incidences = []
       source_document.xpath("//incidencia").each do |x|
         attrs ={
