@@ -36,7 +36,7 @@ describe "Connection" do
   describe "http_connection" do
     it "should return Hpricot::XML" do
        DataFactory.configure do |config|
-        config.password = "Golazzos"
+        config.password = "MyPassword"
         config.http = true
        end
        attrs = {canal: "deportes.futbol.colombia.equipos"}

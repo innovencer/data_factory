@@ -8,6 +8,7 @@ module DataFactory
     attribute :country_name, String
     attribute :nickname1, String
     attribute :nickname2, String
+    attribute :initials, String
     attribute :national_team, Boolean
 
     self.channel_type = "equipos"
@@ -22,7 +23,8 @@ module DataFactory
           foundation_date: obj.at("fechaFundacion").text,
           country_name: obj["paisNombre"],
           nickname1: obj.at("apodo").text,
-          nickname2: obj.at("apodo").text,
+          nickname2: obj.at("apodo2").text,
+          initials: obj.at("sigla").text,
           national_team: attrs[:national_team]
         }
         teams << self.new(attrs)

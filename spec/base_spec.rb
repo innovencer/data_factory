@@ -16,7 +16,7 @@ describe "Base" do
 
   it "should get the source documen in order to extract the  info from files" do
     DataFactory.configure do |config|
-       config.password = "Golazzos"
+       config.password = "MyPassword"
        config.http = true
     end
     DataFactory::Team.league_name = "champions"

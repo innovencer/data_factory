@@ -1,5 +1,5 @@
 DataFactory.configure do |config|
-   config.password = "Golazzos"
+   config.password = "MyPassword"
    config.http = true
 end
 DataFactory::Team.league_name = "espana"
