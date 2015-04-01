@@ -1,6 +1,6 @@
 # DataFactory
 
-TODO: Write a gem description
+Ruby Client For DataFactory Service
 
 ## Installation
 
@@ -36,7 +36,6 @@ document_path = "deportes.futbol.mundial.equipos.xml"
 DataFactory::Team.source_file_name = document_path
 DataFactory::Team.fetch_all(national_team: true) #=> [#<DataFactory::Team:0x007fb0e13ec3f0 @allowed_writer_methods=#<Set: {"id=", "name=", "complete_name=", "foundation_date=", "country_name=", "nickname1=", "nickname2=", "national_team="}>, @id=274, @name="Alemania", @complete_name="German Football Association", @foundation_date="", @country_name="Alemania", @nickname1="", @nickname2="", @national_team=true>]
 ```
-
 
 
 ## Contributing
