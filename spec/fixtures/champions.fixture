@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<fixture>
+    <deporte id="1">F&#195;&#186;tbol</deporte>
+    <categoria id="32" canal="champions">UEFA Champions League</categoria>
+    <campeonato id="3791">UEFA Champions League - 2015 - 2016</campeonato>
+    <campeonatoNombreAlternativo id="3791">UCL 2015 - 2016</campeonatoNombreAlternativo>
+    <campeonatoDescripcion id="3791"></campeonatoDescripcion>
+    <campeonatoDescripcionDescenso id="3791"></campeonatoDescripcionDescenso>
+    <fechaActual>20151215</fechaActual>
+    <horaActual gmt="-3">15:28:31</horaActual>
+    <fecha id="355667" fecha="20150915" fechadesde="20150915" fechahasta="20150915" nombre="Grupo A - Fecha 1" nombrenivel="Fase de Grupos" nivel="1" orden="1" nombreDia="Martes" fn="1" estado="">
+        <partido id="240289" fecha="20150915" hora="15:45:00" lugarCiudad="Par&#195;&#173;s" nombreEstadio="Parc de Princes" clubEstadio="" idEstadio="433" estadioGMT="" idZonaHoraria="" nombreDia="Martes" nivelCarga="1" nivelCobertura="700" ordenAgenda="0" tipo="" nro="1" nd="" idGan="1370" nomGan="PSG">
+            <estado id="2">Finalizado</estado>
+            <horaEstado>17:34:06</horaEstado>
+            <local id="1370" paisId="31" pais="Francia" paisSigla="FRA" nombreCorto="" nombreasociacion="" sigla="PSG" nc="PSG">PSG</local>
+            <goleslocal>2</goleslocal>
+            <goleadoreslocal>
+                <jugador nombre="&#195;. Di Mar&#195;&#173;a" nom="&#195;ngel" ape="Di Mar&#195;&#173;a" nombreCompleto="&#195;ngel Di Mar&#195;&#173;a" jugadorId="7202">
+                    <goles>
+                        <gol tipo="goles totales" cantidad="1" />
+                    </goles>
+                </jugador>
+                <jugador nombre="E. Cavani" nom="Edinson" ape="Cavani" nombreCompleto="Edinson Cavani" jugadorId="12610">
+                    <goles>
+                        <gol tipo="goles totales" cantidad="1" />
+                    </goles>
+                </jugador>
+            </goleadoreslocal>
+            <golesDefPenaleslocal></golesDefPenaleslocal>
+            <visitante id="3294" paisId="41" pais="Suecia" paisSigla="SUE" nombreCorto="" nombreasociacion="" sigla="MAL" nc="Malm&#195;&#182;">Malm&#195;&#182;</visitante>
+            <golesvisitante>0</golesvisitante>
+            <goleadoresvisitante></goleadoresvisitante>
+            <golesDefPenalesvisitante></golesDefPenalesvisitante>
+            <arbitro id="79085" nombre="Karasev, Sergei" nc="S. Karasev" pais="Rusia" />
+            <medios>
+                <medio id="9" nombre="ESPN" />
+                <medio id="10011" nombre="ESPN HD" />
+            </medios>
+        </partido>
+        <partido id="240406" fecha="20160412" hora="" lugarCiudad="" nombreEstadio="" clubEstadio="" idEstadio="" estadioGMT="" idZonaHoraria="" nombreDia="Martes" nivelCarga="1" nivelCobertura="1000" ordenAgenda="21" tipo="vuelta" nro="116" nd="" idGan="" nomGan="">
+            <estado id="0"></estado>
+            <horaEstado></horaEstado>
+            <local id="" paisId="" pais="" paisSigla="" nombreCorto="" nombreasociacion="" sigla="" nc="C. 2">Cuartofinalista 2</local>
+            <goleslocal></goleslocal>
+            <goleadoreslocal></goleadoreslocal>
+            <golesDefPenaleslocal></golesDefPenaleslocal>
+            <visitante id="" paisId="" pais="" paisSigla="" nombreCorto="" nombreasociacion="" sigla="" nc="C. 6">Cuartofinalista 6</visitante>
+            <golesvisitante></golesvisitante>
+            <goleadoresvisitante></goleadoresvisitante>
+            <golesDefPenalesvisitante></golesDefPenalesvisitante>
+            <medios></medios>
+        </partido>
+   </fecha>
+</fixture>
