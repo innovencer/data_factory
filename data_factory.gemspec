@@ -24,9 +24,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'shoulda-matchers'
   spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'vcr'
-  spec.add_development_dependency 'typhoeus'
 
   spec.add_runtime_dependency 'nokogiri'
   spec.add_runtime_dependency 'virtus'
   spec.add_runtime_dependency 'activesupport', '~> 4.1'
+  spec.add_runtime_dependency 'typhoeus'
 end
