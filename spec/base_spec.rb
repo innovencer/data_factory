@@ -1,7 +1,6 @@
 require "spec_helper"
 
 describe "Base" do
-
   it "should return a list of name of leages" do
     DataFactory::LEAGUES.should include "deportes.futbol.champions.equipos.xml"
   end
@@ -14,12 +13,13 @@ describe "Base" do
     DataFactory::Team.class_variable_get(:@@league_name).should == "mexico"
   end
 
-  it "should get the source documen in order to extract the  info from files" do
+  it "should get the source document in order to extract the info from files" do
     DataFactory.configure do |config|
-       config.password = "MyPassword"
-       config.http = true
     end
+
     DataFactory::Team.league_name = "champions"
-    DataFactory::Team.source_document.should be_an_instance_of Nokogiri::XML::Document
+    VCR.use_cassette 'champions_teams' do
+      DataFactory::Team.source_document.should be_an_instance_of Nokogiri::XML::Document
+    end
   end
 end

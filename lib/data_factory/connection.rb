@@ -1,5 +1,6 @@
-require 'open-uri'
+require 'typhoeus'
 require 'active_support/core_ext/hash'
+
 module DataFactory
   module Connection
     def document(attrs = {})
@@ -11,7 +12,8 @@ module DataFactory
     end
 
     def http_connection(attrs)
-      Nokogiri::XML.parse(open(http_url(attrs)))
+      response = Typhoeus.get http_url(attrs), accept_encoding: 'gzip'
+      Nokogiri::XML.parse response.body
     end
 
     def ftp_connection

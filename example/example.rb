@@ -1,7 +1,3 @@
-DataFactory.configure do |config|
-   config.password = "MyPassword"
-   config.http = true
-end
 DataFactory::Team.league_name = "espana"
 DataFactory::Team.fetch_all
 

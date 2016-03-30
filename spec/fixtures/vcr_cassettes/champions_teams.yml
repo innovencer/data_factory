@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://feed.datafactory.la?canal=deportes.futbol.champions.equipos&ppaass=Golazzos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 30 Mar 2016 07:02:34 GMT
+      Server:
+      - Apache/2.2.15 (SuSE)
+      X-Powered-By:
+      - PHP/5.3.3
+      CanalPedido:
+      - deportes.futbol.champions.equipos
+      CanalEntregado:
+      - deportes.futbol.champions.equipos
+      Vary:
+      - Accept-Encoding,User-Agent
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1673'
+      Content-Type:
+      - text/html; charset=ISO-8859-1
+    body:
+      encoding: ISO-8859-1
+      string: <?xml version='1.0' encoding='ISO-8859-1'?><plantelEquipo><deporte id="1">Fútbol</deporte><categoria
+        id="32" canal="champions">UEFA Champions League</categoria><campeonato id="3791">UEFA
+        Champions League - 2015 - 2016</campeonato><campeonatoNombreAlternativo id="3791">UCL
+        2015 - 2016</campeonatoNombreAlternativo><fechaActual>20150827</fechaActual><equipo
+        id="558" nombre="Arsenal" paisId="34" paisNombre="Inglaterra"><nombre>Arsenal</nombre><nombreCompleto>Arsenal
+        Football Club</nombreCompleto><sigla>ARS</sigla><apodo>The Gunners</apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>285</institucionPadre><pais>Inglaterra</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="5797" nombre="Astana" paisId="172" paisNombre="Kazajistán"><nombre>Astana</nombre><nombreCompleto>Astana</nombreCompleto><sigla>AST</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre></institucionPadre><pais>Kazajistán</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="29" nombre="At. Madrid" paisId="2" paisNombre="España"><nombre>At. Madrid</nombre><nombreCompleto>Club
+        Atlético de Madrid S.A.D.</nombreCompleto><sigla>ATM</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion>1903-01-01</fechaFundacion><historia></historia><institucionPadre>280</institucionPadre><pais>España</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="31" nombre="Barcelona" paisId="2" paisNombre="España"><nombre>Barcelona</nombre><nombreCompleto>Fútbol
+        Club Barcelona</nombreCompleto><sigla>BAR</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion>1899-01-01</fechaFundacion><historia></historia><institucionPadre>280</institucionPadre><pais>España</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="1308" nombre="BATE Borisov" paisId="104" paisNombre="Bielorusia"><nombre>BATE
+        Borisov</nombre><nombreCompleto>FC Bate Borisov</nombreCompleto><sigla>BB</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>1286</institucionPadre><pais>Bielorusia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="706" nombre="Bayer Leverkusen" paisId="26" paisNombre="Alemania"><nombre>Bayer
+        Leverkusen</nombre><nombreCompleto></nombreCompleto><sigla>LEV</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>274</institucionPadre><pais>Alemania</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="617" nombre="Bayern Munich" paisId="26" paisNombre="Alemania"><nombre>Bayern
+        Munich</nombre><nombreCompleto>Bayern Munich</nombreCompleto><sigla>BAY</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>274</institucionPadre><pais>Alemania</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="798" nombre="Benfica" paisId="37" paisNombre="Portugal"><nombre>Benfica</nombre><nombreCompleto>SL
+        Benfica</nombreCompleto><sigla>BEN</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>291</institucionPadre><pais>Portugal</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="1259" nombre="B. Monchengladbach" paisId="26" paisNombre="Alemania"><nombre>B.
+        Monchengladbach</nombre><nombreCompleto>Borussia Monchengladbach</nombreCompleto><sigla>MON</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>274</institucionPadre><pais>Alemania</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="563" nombre="Chelsea" paisId="34" paisNombre="Inglaterra"><nombre>Chelsea</nombre><nombreCompleto></nombreCompleto><sigla>Che</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>285</institucionPadre><pais>Inglaterra</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="802" nombre="CSKA Moscú" paisId="78" paisNombre="Rusia"><nombre>CSKA Moscú</nombre><nombreCompleto>PFC
+        CSKA Moskva</nombreCompleto><sigla>CSKA</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>481</institucionPadre><pais>Rusia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="1360" nombre="Dinamo Zagreb" paisId="30" paisNombre="Croacia"><nombre>Dinamo
+        Zagreb</nombre><nombreCompleto></nombreCompleto><sigla>ZAG</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>279</institucionPadre><pais>Croacia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="805" nombre="Dynamo Kyev" paisId="46" paisNombre="Ucrania"><nombre>Dynamo
+        Kyev</nombre><nombreCompleto>FC Dynamo Kyev</nombreCompleto><sigla>DKY</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>300</institucionPadre><pais>Ucrania</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="1362" nombre="Galatasaray" paisId="58" paisNombre="Turquía"><nombre>Galatasaray</nombre><nombreCompleto></nombreCompleto><sigla>GAL</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>457</institucionPadre><pais>Turquía</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="2137" nombre="Gent" paisId="47" paisNombre="Bélgica"><nombre>Gent</nombre><nombreCompleto>Koninklijke
+        Atletiek Associatie Gent</nombreCompleto><sigla>Ge</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>446</institucionPadre><pais>Bélgica</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="52" nombre="Juventus" paisId="3" paisNombre="Italia"><nombre>Juventus</nombre><nombreCompleto>Juventus
+        Football Club</nombreCompleto><sigla>Juv</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion>1897-01-01</fechaFundacion><historia></historia><institucionPadre>287</institucionPadre><pais>Italia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="794" nombre="Lyon" paisId="31" paisNombre="Francia"><nombre>Lyon</nombre><nombreCompleto>Olympique
+        Lyonnais</nombreCompleto><sigla>LYO</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>282</institucionPadre><pais>Francia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="2186" nombre="Maccabi Tel-Aviv" paisId="66" paisNombre="Israel"><nombre>Maccabi
+        Tel-Aviv</nombre><nombreCompleto>Maccabi Tel Aviv Football Club</nombreCompleto><sigla>MAC</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>465</institucionPadre><pais>Israel</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="3294" nombre="Malmö" paisId="41" paisNombre="Suecia"><nombre>Malmö</nombre><nombreCompleto>Malmö
+        Fotbollförening</nombreCompleto><sigla>MAL</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion>1910-02-24</fechaFundacion><historia></historia><institucionPadre>295</institucionPadre><pais>Suecia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="567" nombre="Manchester City" paisId="34" paisNombre="Inglaterra"><nombre>Manchester
+        City</nombre><nombreCompleto></nombreCompleto><sigla>MCI</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>285</institucionPadre><pais>Inglaterra</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="568" nombre="Manchester Utd." paisId="34" paisNombre="Inglaterra"><nombre>Manchester
+        Utd.</nombre><nombreCompleto></nombreCompleto><sigla>MAN</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>285</institucionPadre><pais>Inglaterra</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="795" nombre="Olympiacos" paisId="77" paisNombre="Grecia"><nombre>Olympiacos</nombre><nombreCompleto>Olympiacos
+        CFP</nombreCompleto><sigla>OLY</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>480</institucionPadre><pais>Grecia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="797" nombre="Porto" paisId="37" paisNombre="Portugal"><nombre>Porto</nombre><nombreCompleto>FC
+        Porto</nombreCompleto><sigla>POR</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>291</institucionPadre><pais>Portugal</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="1370" nombre="PSG" paisId="31" paisNombre="Francia"><nombre>PSG</nombre><nombreCompleto></nombreCompleto><sigla>PSG</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>282</institucionPadre><pais>Francia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="618" nombre="PSV" paisId="33" paisNombre="Holanda"><nombre>PSV</nombre><nombreCompleto>PSV
+        Eindoven</nombreCompleto><sigla>PSV</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>289</institucionPadre><pais>Holanda</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="39" nombre="Real Madrid" paisId="2" paisNombre="España"><nombre>Real Madrid</nombre><nombreCompleto>Real
+        Madrid Club de Fútbol</nombreCompleto><sigla>RMA</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion>1902-01-01</fechaFundacion><historia></historia><institucionPadre>280</institucionPadre><pais>España</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="61" nombre="Roma" paisId="3" paisNombre="Italia"><nombre>Roma</nombre><nombreCompleto>Associazione
+        Sportiva Roma</nombreCompleto><sigla>Rom</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion>1927-01-01</fechaFundacion><historia></historia><institucionPadre>287</institucionPadre><pais>Italia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="41" nombre="Sevilla" paisId="2" paisNombre="España"><nombre>Sevilla</nombre><nombreCompleto>Sevilla
+        Fútbol Club S.A.D.</nombreCompleto><sigla>SEV</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion>1905-01-01</fechaFundacion><historia></historia><institucionPadre>280</institucionPadre><pais>España</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="806" nombre="Shakhtar Donetsk" paisId="46" paisNombre="Ucrania"><nombre>Shakhtar
+        Donetsk</nombre><nombreCompleto>FC Shakhtar Donetsk</nombreCompleto><sigla>SKT</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>300</institucionPadre><pais>Ucrania</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="42" nombre="Valencia" paisId="2" paisNombre="España"><nombre>Valencia</nombre><nombreCompleto>Valencia
+        Club Fútbol S.A.D.</nombreCompleto><sigla>VAL</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion>1919-01-01</fechaFundacion><historia></historia><institucionPadre>280</institucionPadre><pais>España</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="720" nombre="Wolfsburgo" paisId="26" paisNombre="Alemania"><nombre>Wolfsburgo</nombre><nombreCompleto></nombreCompleto><sigla>WOL</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>274</institucionPadre><pais>Alemania</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="1314" nombre="Zenit" paisId="78" paisNombre="Rusia"><nombre>Zenit</nombre><nombreCompleto>FC
+        Zenit</nombreCompleto><sigla>ZEN</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>481</institucionPadre><pais>Rusia</pais><provincia></provincia><localidad></localidad></equipo></plantelEquipo>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.champions.equipos&ppaass=Golazzos
+  recorded_at: Wed, 30 Mar 2016 07:02:34 GMT
+recorded_with: VCR 3.0.1

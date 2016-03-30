@@ -1,10 +1,9 @@
 module DataFactory
-  class << self
-    attr_accessor :configuration
+  def self.configuration
+    @configuration ||= Configuration.new
   end
 
   def self.configure
-    self.configuration ||= Configuration.new
     yield(configuration)
   end
 
@@ -15,8 +14,9 @@ module DataFactory
     def initialize
       @channels = %w(fixture calendario posiciones goleadores ficha plantelxcampeonato)
       @http = true
-      @url = "http://www.datafactory.ws/clientes/xml/index.php"
-      @sport = "futbol"
+      @url = 'http://feed.datafactory.la'
+      @sport = 'futbol'
+      @password = 'Golazzos'
     end
 
     def http=(value)

@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://feed.datafactory.la?canal=deportes.futbol.colombia.equipos&ppaass=Golazzos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 30 Mar 2016 07:02:34 GMT
+      Server:
+      - Apache/2.2.15 (SuSE)
+      X-Powered-By:
+      - PHP/5.3.3
+      CanalPedido:
+      - deportes.futbol.colombia.equipos
+      CanalEntregado:
+      - deportes.futbol.colombia.equipos
+      Vary:
+      - Accept-Encoding,User-Agent
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1024'
+      Content-Type:
+      - text/html; charset=ISO-8859-1
+    body:
+      encoding: ISO-8859-1
+      string: <?xml version='1.0' encoding='ISO-8859-1'?><plantelEquipo><deporte id="1">Fútbol</deporte><categoria
+        id="11" canal="colombia">Colombia - Primera División</categoria><campeonato
+        id="3889">Colombia - Liga Águila 2016</campeonato><campeonatoNombreAlternativo
+        id="3889">Liga Águila 2016</campeonatoNombreAlternativo><fechaActual>20160125</fechaActual><equipo
+        id="921" nombre="Alianza Petrolera" paisId="7" paisNombre="Colombia"><nombre>Alianza
+        Petrolera</nombre><nombreCompleto>Alianza Petrolera</nombreCompleto><sigla>APE</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion>1990-10-24</fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="105" nombre="At. Nacional" paisId="7" paisNombre="Colombia"><nombre>At.
+        Nacional</nombre><nombreCompleto>Atlético Nacional de Medellín</nombreCompleto><sigla>ATN</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="177" nombre="Boyacá Chicó" paisId="7" paisNombre="Colombia"><nombre>Boyacá
+        Chicó</nombre><nombreCompleto>Boyacá Chicó Fútbol Club</nombreCompleto><sigla>BOY</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="175" nombre="Bucaramanga" paisId="7" paisNombre="Colombia"><nombre>Bucaramanga</nombre><nombreCompleto>Club
+        Atléitico Bucaramanga</nombreCompleto><sigla>BUC</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="927" nombre="Cortuluá" paisId="7" paisNombre="Colombia"><nombre>Cortuluá</nombre><nombreCompleto>Corporación
+        Club Deportivo Tulua</nombreCompleto><sigla>COR</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="111" nombre="Deportivo Cali" paisId="7" paisNombre="Colombia"><nombre>Deportivo
+        Cali</nombre><nombreCompleto>Asociación Deportivo Cali</nombreCompleto><sigla>DCA</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="182" nombre="Envigado" paisId="7" paisNombre="Colombia"><nombre>Envigado</nombre><nombreCompleto>Corporación
+        Deportiva Envigado FC</nombreCompleto><sigla>ENV</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="3209" nombre="Fortaleza FC" paisId="7" paisNombre="Colombia"><nombre>Fortaleza
+        FC</nombre><nombreCompleto>Fortaleza Fútbol Club Soacha</nombreCompleto><sigla>FOR</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion>2011-01-04</fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="176" nombre="Huila" paisId="7" paisNombre="Colombia"><nombre>Huila</nombre><nombreCompleto>Club
+        Deportivo Atlético Huila</nombreCompleto><sigla>HUI</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="67" nombre="Indep. Medellín" paisId="7" paisNombre="Colombia"><nombre>Indep.
+        Medellín</nombre><nombreCompleto>Independiente Medellín</nombreCompleto><sigla>DIM</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="1655" nombre="Jaguares" paisId="7" paisNombre="Colombia"><nombre>Jaguares</nombre><nombreCompleto>Jaguares
+        de Córdoba Fútbol Club</nombreCompleto><sigla>JAG</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="81" nombre="Junior" paisId="7" paisNombre="Colombia"><nombre>Junior</nombre><nombreCompleto>Corporación
+        Popular Deportivo Junior</nombreCompleto><sigla>Jun</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="597" nombre="La Equidad" paisId="7" paisNombre="Colombia"><nombre>La Equidad</nombre><nombreCompleto>Club
+        Deportivo La Equidad</nombreCompleto><sigla>EQU</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="184" nombre="Millonarios" paisId="7" paisNombre="Colombia"><nombre>Millonarios</nombre><nombreCompleto>Club
+        Deportivo Los Millonarios</nombreCompleto><sigla>MIL</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="88" nombre="Once Caldas" paisId="7" paisNombre="Colombia"><nombre>Once
+        Caldas</nombre><nombreCompleto>Corporación Deportiva Once Caldas</nombreCompleto><sigla>ONC</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="180" nombre="Pasto" paisId="7" paisNombre="Colombia"><nombre>Pasto</nombre><nombreCompleto>Asociación
+        Deportivo Pasto</nombreCompleto><sigla>PAS</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="933" nombre="Patriotas FC" paisId="7" paisNombre="Colombia"><nombre>Patriotas
+        FC</nombre><nombreCompleto>Corporación Deportiva Patriotas Fútbol Club</nombreCompleto><sigla>PAT</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="922" nombre="Rionegro F.C" paisId="7" paisNombre="Colombia"><nombre>Rionegro
+        F.C</nombre><nombreCompleto>Rionegro F.C</nombreCompleto><sigla>RIO</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="183" nombre="Santa Fe" paisId="7" paisNombre="Colombia"><nombre>Santa
+        Fe</nombre><nombreCompleto>Santa Fe Corporación Deportiva</nombreCompleto><sigla>SFE</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo><equipo
+        id="179" nombre="Tolima" paisId="7" paisNombre="Colombia"><nombre>Tolima</nombre><nombreCompleto>Corporación
+        Club Deportes Tolima</nombreCompleto><sigla>TOL</sigla><apodo></apodo><apodo2></apodo2><fechaFundacion></fechaFundacion><historia></historia><institucionPadre>168</institucionPadre><pais>Colombia</pais><provincia></provincia><localidad></localidad></equipo></plantelEquipo>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.colombia.equipos&ppaass=Golazzos
+  recorded_at: Wed, 30 Mar 2016 07:02:34 GMT
+recorded_with: VCR 3.0.1

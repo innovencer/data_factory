@@ -2,10 +2,11 @@ module DataFactory
   class Fixture < Calendar
 
     self.channel_type = "fixture"
+
     private
 
     def self.load_matches
-      source_document.xpath("//partido").map do |match|
+      matches = source_document.xpath("//partido").map do |match|
         Match.new({
           id: match[:id],
           local: load_team(match.at("local")),
@@ -20,7 +21,8 @@ module DataFactory
           arbitro: match.at("arbitro").to_h,
           medios: (match.at("medios")/"medio").map{|x| x[:nombre]}
         })
-      end.reject{ |match| match.local.id.blank? || match.visitante.id.blank? }
+      end
+      matches.reject{ |match| match.local.id.blank? || match.visitante.id.blank? }
     end
   end
 end
