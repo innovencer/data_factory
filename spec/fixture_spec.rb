@@ -39,6 +39,7 @@ describe 'DataFactory::Fixture' do
       match = matches.find{|m| m.id == 2381832}
       expect(match.goles_local).to eq 3
       expect(match.goles_visitante).to eq 1
+      expect(match.id_estado).to eq 2
     end
   end
 end

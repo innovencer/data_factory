@@ -29,7 +29,6 @@ module DataFactory
           lugar_ciudad: match["lugarCiudad"],
           nombre_estadio: match["nombreEstadio"],
           medios: (match.at("medios")/"medio").map{|x| x[:nombre]}
-
         }
         matches << Match.new(attrs)
       end

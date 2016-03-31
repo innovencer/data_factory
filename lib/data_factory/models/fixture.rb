@@ -15,7 +15,7 @@ module DataFactory
           fecha: match[:fecha],
           lugar_ciudad: match["lugarCiudad"],
           nombre_estadio: match["nombreEstadio"],
-          estado: match.at("estado").text,
+          id_estado: match.at("estado")[:id].to_i,
           goles_local: match.at("goleslocal").text,
           goles_visitante: match.at("golesvisitante").text,
           arbitro: match.at("arbitro").to_h,
