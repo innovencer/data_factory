@@ -43,4 +43,3 @@ describe 'DataFactory::Fixture' do
     end
   end
 end
-

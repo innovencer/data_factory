@@ -1,3 +1,5 @@
+require_relative '../lib/data_factory'
+
 DataFactory::Team.league_name = "espana"
 DataFactory::Team.fetch_all
 

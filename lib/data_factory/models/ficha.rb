@@ -1,40 +1,55 @@
 module DataFactory
-  class Incidence
-    include Virtus.value_object
-    attribute :id, String
-    attribute :orden, String
-    attribute :tipo, String
-    attribute :sub_tipo, String
-    attribute :minuto, String
-    attribute :tiempo, String
-    attribute :jugador, Hash
-    attribute :team_id, Integer
-  end
-
-  class Ficha < BaseModel
+  class Ficha
     include Virtus.value_object
 
-    self.channel_type = "ficha"
-    attribute :tournament, Tournament
-    attribute :match, Match
-    attribute :incidences, Array[Incidence]
+    attribute :torneo, String
+    attribute :id_partido, Integer
 
-    def self.fetch
-      incidences = []
-      source_document.xpath("//incidencia").each do |x|
-        attrs ={
-          id: x[:id],
-          orden: x[:orden],
-          tipo: x[:tipo],
-          sub_tipo: x[:sub_tipo],
-          tiempo: x.at("tiempo").text,
-          minuto: x.at("minuto").text,
-          team_id: x.at("key")[:id],
+    def match
+      Partido.new({
+        id_torneo: document.xpath('//campeonato/@id').text,
+        id_local: document.xpath("//equipo[@condicion='local']/@id").text,
+        id_visitante: document.xpath("//equipo[@condicion='visitante']/@id").text,
+        id_estado: document.xpath('//estadoEvento/@idestado').text,
+        goles_local: document.xpath("//equipo[@condicion='local']/@goles").text,
+        goles_visitante: document.xpath("//equipo[@condicion='visitante']/@goles").text,
+        fecha: document.xpath("//fichapartido/@dia").text,
+        hora: document.xpath("//fichapartido/@horario").text
+      })
+    end
 
-        }
-        incidences << Incidence.new(attrs)
-      end
-      self.new(incidences: incidences)
+    def channel
+      "deportes.futbol.#{torneo}.ficha.#{id_partido}"
+    end
+
+    private
+
+    def http_url
+      uri = URI 'http://feed.datafactory.la'
+      attrs = {canal: channel, ppaass: 'Golazzos'}
+      URI::HTTP.build({host: uri.host, path: uri.path, query: attrs.to_query})
+    end
+
+    def document
+      @document ||= Nokogiri::XML.parse response.body
+    end
+
+    def response
+      Typhoeus.get http_url, accept_encoding: 'gzip'
+    end
+
+    def load_team(xpath)
+      team_node = document.xpath(xpath).first
+      Team.new({
+        id: team_node[:id],
+        nombre: team_node[:nombre],
+        sigla: team_node[:sigla]
+      })
+    end
+
+    def load_tournament
+      node_campeonato = document.xpath('//campeonato').first
+      Tournament.new id: node_campeonato[:id], name: node_campeonato.text
     end
   end
 end
