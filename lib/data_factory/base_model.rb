@@ -35,7 +35,7 @@ module DataFactory
       return self.channel_name if self.channel_name
       channel_type = self.class_variable_get(:@@channel_type)
       league_name = self.class_variable_get(:@@league_name)
-      "deportes.#{DataFactory.configuration.sport}.#{league_name}.#{channel_type}"
+      "deportes.futbol.#{league_name}.#{channel_type}"
     end
   end
 end

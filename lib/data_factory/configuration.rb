@@ -8,13 +8,12 @@ module DataFactory
   end
 
   class Configuration
-    attr_accessor :leagues, :url, :password, :sport
     attr_reader :channels
+    attr_accessor :leagues, :url, :password
 
     def initialize
       @channels = %w(fixture calendario posiciones goleadores ficha plantelxcampeonato)
       @url = 'http://feed.datafactory.la'
-      @sport = 'futbol'
       @password = 'Golazzos'
     end
   end
