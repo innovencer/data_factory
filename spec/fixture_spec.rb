@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'DataFactory::Fixture' do
   context :champions do
     before :each do
-      DataFactory::Fixture.channel_name = "deportes.futbol.champions.fixture.xml"
+      fixture = DataFactory::Fixture.new 'champions'
       VCR.use_cassette 'champions_fixture' do
-        @matches = DataFactory::Fixture.load_matches
+        @matches = fixture.load_matches
       end
     end
 
@@ -28,15 +28,14 @@ describe 'DataFactory::Fixture' do
 
   context 'Eliminatorias' do
     before :each do
-      DataFactory::Fixture.channel_name = "deportes.futbol.eliminatorias.fixture.xml"
+      fixture = DataFactory::Fixture.new 'eliminatorias'
       VCR.use_cassette 'eliminatorias_fixture' do
-        @fixture = DataFactory::Fixture.fetch_all
+        @matches = fixture.load_matches
       end
     end
 
     it 'The match of Colombia vs Ecuador score is 3-1' do
-      matches = @fixture.matches
-      match = matches.find{|m| m.id == 2381832}
+      match = @matches.find{|m| m.id == 2381832}
       expect(match.local_score).to eq 3
       expect(match.visitant_score).to eq 1
       expect(match.status_id).to eq 2

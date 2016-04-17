@@ -1,11 +1,10 @@
 module DataFactory
-  class Fixture < Calendar
+  class Fixture
+    def initialize(tournament)
+      @tournament = tournament
+    end
 
-    self.channel_type = "fixture"
-
-    private
-
-    def self.load_matches
+    def load_matches
       matches = source_document.xpath("//partido").map do |match|
         Match.new({
           id: match[:id],
@@ -24,6 +23,18 @@ module DataFactory
       end
       matches.reject{ |match| match.local_team.id.blank? || match.visitant_team.id.blank? }
     end
+
+    def load_team(document)
+      Team.new(id: document[:id], name: document.text)
+    end
+
+    def source_document
+      attrs = { canal: channel }
+      DataFactory.document(attrs)
+    end
+
+    def channel
+      "deportes.futbol.#{@tournament}.fixture.xml"
+    end
   end
 end
-
