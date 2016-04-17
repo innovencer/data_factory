@@ -22,7 +22,7 @@ describe 'DataFactory::Fixture' do
     end
 
     it "Loads a match with a local team with id 1370" do
-      expect(@matches.first.local.id).to eq(1370)
+      expect(@matches.first.local_team.id).to eq(1370)
     end
   end
 
@@ -37,9 +37,9 @@ describe 'DataFactory::Fixture' do
     it 'The match of Colombia vs Ecuador score is 3-1' do
       matches = @fixture.matches
       match = matches.find{|m| m.id == 2381832}
-      expect(match.goles_local).to eq 3
-      expect(match.goles_visitante).to eq 1
-      expect(match.id_estado).to eq 2
+      expect(match.local_score).to eq 3
+      expect(match.visitant_score).to eq 1
+      expect(match.status_id).to eq 2
     end
   end
 end

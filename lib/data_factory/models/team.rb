@@ -1,11 +1,9 @@
 module DataFactory
-  class Equipo
+  class Team
     include Virtus.value_object
 
     attribute :id, Integer
-    attribute :nombre, String
-    attribute :nombre_completo, String
-    attribute :pais, String
-    attribute :sigla, String
+    attribute :name, String
+    attribute :country, String
   end
 end

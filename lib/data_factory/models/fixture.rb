@@ -9,20 +9,20 @@ module DataFactory
       matches = source_document.xpath("//partido").map do |match|
         Match.new({
           id: match[:id],
-          local: load_team(match.at("local")),
-          visitante: load_team(match.at("visitante")),
+          local_team: load_team(match.at("local")),
+          visitant_team: load_team(match.at("visitante")),
           hora: match[:hora],
           fecha: match[:fecha],
           lugar_ciudad: match["lugarCiudad"],
           nombre_estadio: match["nombreEstadio"],
-          id_estado: match.at("estado")[:id].to_i,
-          goles_local: match.at("goleslocal").text,
-          goles_visitante: match.at("golesvisitante").text,
+          status_id: match.at("estado")[:id].to_i,
+          local_score: match.at("goleslocal").text,
+          visitant_score: match.at("golesvisitante").text,
           arbitro: match.at("arbitro").to_h,
           medios: (match.at("medios")/"medio").map{|x| x[:nombre]}
         })
       end
-      matches.reject{ |match| match.local.id.blank? || match.visitante.id.blank? }
+      matches.reject{ |match| match.local_team.id.blank? || match.visitant_team.id.blank? }
     end
   end
 end
