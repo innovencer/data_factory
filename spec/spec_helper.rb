@@ -5,8 +5,7 @@ require 'bundler/setup'
 require 'rspec/mocks'
 require 'byebug'
 require 'vcr'
-Dir["./lib/*.rb"].each {|file| require file }
-Dir["./spec/models/*.rb"].each {|file| require file }
+require './lib/data_factory'
 
 VCR.configure do |config|
   config.hook_into :typhoeus
