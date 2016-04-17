@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'shoulda-matchers'
   spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'vcr'
+  spec.add_development_dependency 'simplecov'
 
   spec.add_runtime_dependency 'nokogiri'
   spec.add_runtime_dependency 'virtus'

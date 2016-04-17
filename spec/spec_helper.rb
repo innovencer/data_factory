@@ -4,8 +4,13 @@ ENV['RACK_ENV'] = "test"
 require 'bundler/setup'
 require 'rspec/mocks'
 require 'byebug'
+require 'simplecov'
 require 'vcr'
 require './lib/data_factory'
+
+SimpleCov.start do
+  add_filter '/spec'
+end
 
 VCR.configure do |config|
   config.hook_into :typhoeus

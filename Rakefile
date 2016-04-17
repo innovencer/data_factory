@@ -10,33 +10,3 @@ task :console do
   puts "Loading development console..."
   system("irb -r data_factory")
 end
-
-task :help do
-  puts "Available rake tasks: "
-  puts "rake console - Run a IRB console with all enviroment loaded"
-  puts "rake spec - Run specs"
-end
-
-task :spec do
-  desc "Run all specs with rcov"
-  RSpec::Core::RakeTask.new(:spec) do |t|
-    t.pattern = "spec/**/*_spec.rb"
-  end
-end
-
-desc "Update all the data in data_factorydata/"
-task :update_data do
-require 'open-uri'
-  names = %w(champions colombia espana libertadores mexico mundial peru premierleague)
-  names.each do |name|
-    puts "Processing #{name}"
-    date = Time.now.strftime("%Y%m%d")
-    time =  Time.now.strftime("%H%M%S")
-    url = "http://www.datafactory.ws/clientes/xml/index.php?ppaass=Golazzos&canal=deportes.futbol.#{name}.equipos&desde=#{date}&hora=#{time}"
-    puts url
-    open("lib/data_factory/data/deportes.futbol.#{name}.equipos.xml", "wb") {|file| file << open(url).read }
-  end
-
-end
-
-task :default => [:spec]
