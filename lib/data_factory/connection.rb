@@ -4,19 +4,8 @@ require 'active_support/core_ext/hash'
 module DataFactory
   module Connection
     def document(attrs = {})
-      if DataFactory.configuration.http
-        http_connection(attrs)
-      else
-        ftp_connection
-      end
-    end
-
-    def http_connection(attrs)
       response = Typhoeus.get http_url(attrs), accept_encoding: 'gzip'
       Nokogiri::XML.parse response.body
-    end
-
-    def ftp_connection
     end
 
     def http_url(attrs)
