@@ -1,35 +1,30 @@
 require 'spec_helper'
 
 describe 'DataFactory::Fixture' do
-  context :champions do
+  context 'Champions' do
+    let(:fixture){ DataFactory::Fixture.new 'champions' }
+
     before :each do
-      fixture = DataFactory::Fixture.new 'champions'
-      VCR.use_cassette 'champions_fixture' do
+      VCR.use_cassette 'champions_fixture', allow_playback_repeats: true do
         @matches = fixture.load_matches
       end
     end
 
-    it "Loads a list of matches" do
-      expect(@matches).to be_instance_of(Array)
-    end
-
-    it "Loads a list of matches" do
-      expect(@matches.first).to be_instance_of(DataFactory::Match)
-    end
-
-    it "Loads a matches list and the first match has an id 240289" do
+    it 'Loads a matches list and the first match has an id 240289' do
       expect(@matches.first.id).to eq(240289)
     end
 
-    it "Loads a match with a local team with id 1370" do
-      expect(@matches.first.local_team.id).to eq(1370)
+    it "Loads match's teams" do
+      expect(@matches.first.local_team.id).to eq 1370
+      expect(@matches.first.visitant_team.id).to eq 3294
     end
   end
 
   context 'Eliminatorias' do
+    let(:fixture){ DataFactory::Fixture.new 'eliminatorias' }
+
     before :each do
-      fixture = DataFactory::Fixture.new 'eliminatorias'
-      VCR.use_cassette 'eliminatorias_fixture' do
+      VCR.use_cassette 'eliminatorias_fixture', allow_playback_repeats: true do
         @matches = fixture.load_matches
       end
     end

@@ -5,5 +5,6 @@ module DataFactory
     attribute :id, Integer
     attribute :name, String
     attribute :country, String
+    attribute :initials, String
   end
 end
