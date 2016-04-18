@@ -1,10 +1,16 @@
 module DataFactory
   class Fixture
-    def initialize(tournament)
-      @tournament = tournament
+    include Virtus.value_object
+
+    attribute :id, Integer
+    attribute :tournament, String
+
+    def initialize(tournament_name)
+      @tournament_name = tournament_name
     end
 
     def load_matches
+      @tournament = load_tournament source_document.at("campeonato")
       matches = source_document.xpath("//partido").map do |match|
         Match.new({
           id: match[:id],
@@ -20,6 +26,12 @@ module DataFactory
       matches.reject{ |match| match.local_team.id.blank? || match.visitant_team.id.blank? }
     end
 
+    def channel
+      "deportes.futbol.#{@tournament_name}.fixture.xml"
+    end
+
+    private
+
     def load_tournament(document)
       Tournament.new id: document[:id], name: document.text
     end
@@ -30,11 +42,7 @@ module DataFactory
 
     def source_document
       attrs = { canal: channel }
-      DataFactory.document(attrs)
-    end
-
-    def channel
-      "deportes.futbol.#{@tournament}.fixture.xml"
+      @document ||= DataFactory.document(attrs)
     end
   end
 end

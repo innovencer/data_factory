@@ -10,6 +10,10 @@ describe 'DataFactory::Fixture' do
       end
     end
 
+    it 'has a tournament' do
+      expect(fixture.tournament.name).to match /champions/i
+    end
+
     it 'Loads a matches list and the first match has an id 240289' do
       expect(@matches.first.id).to eq(240289)
     end
@@ -27,6 +31,10 @@ describe 'DataFactory::Fixture' do
       VCR.use_cassette 'eliminatorias_fixture', allow_playback_repeats: true do
         @matches = fixture.load_matches
       end
+    end
+
+    it 'has a tournament' do
+      expect(fixture.tournament.name).to match /eliminatorias/i
     end
 
     it 'The match of Colombia vs Ecuador score is 3-1' do
