@@ -7,18 +7,18 @@ module DataFactory
 
     def initialize(tournament_name)
       @tournament_name = tournament_name
+      @tournament = load_tournament
     end
 
     def load_matches
-      @tournament = load_tournament source_document.at("campeonato")
       matches = source_document.xpath("//partido").map do |match|
         Match.new({
           id: match[:id],
           status_id: match.at("estado")[:id].to_i,
-          local_score: match.at("goleslocal").text,
-          visitant_score: match.at("golesvisitante").text,
+          local_score: match.at("goleslocal").text.to_i,
+          visitant_score: match.at("golesvisitante").text.to_i,
           date: match[:fecha], time: match[:hora],
-          tournament: load_tournament(source_document.at("campeonato")),
+          tournament: @tournament,
           local_team: load_team(match.at("local")),
           visitant_team: load_team(match.at("visitante")),
         })
@@ -32,7 +32,8 @@ module DataFactory
 
     private
 
-    def load_tournament(document)
+    def load_tournament
+      document = source_document.at("campeonato")
       Tournament.new id: document[:id], name: document.text
     end
 
