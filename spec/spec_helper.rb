@@ -3,10 +3,10 @@ ENV['RACK_ENV'] = "test"
 
 require 'bundler/setup'
 require './lib/data_factory'
-require 'rspec/mocks'
 require 'byebug'
 require 'simplecov'
 require 'vcr'
+require 'rspec/mocks'
 
 SimpleCov.start do
   add_filter '/spec'

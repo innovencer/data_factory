@@ -7,6 +7,7 @@ require 'data_factory/configuration'
 
 module DataFactory
   autoload :Connection, 'data_factory/connection'
+  autoload :Event, 'data_factory/models/event'
   autoload :Card, 'data_factory/models/card'
   autoload :Fixture, 'data_factory/models/fixture'
   autoload :Team, 'data_factory/models/team'
