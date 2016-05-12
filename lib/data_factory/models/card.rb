@@ -6,9 +6,8 @@ module DataFactory
     attribute :tournament, String
 
     def events
-      @events ||= document.xpath("//incidencia[@tipo='gol']").map{|e| DataFactory::Event.new(
-        id: e[:orden], inciid: e[:inciid], minute: e.xpath('minuto').text, time: e.xpath('tiempo').text,
-        player: e.xpath('jugador').text, key: e.xpath('key').first[:id])}.sort{ |e1, e2| e1.id <=> e2.id }
+      events_elements = document.xpath("//incidencia[@tipo='gol']")
+      Event.load_events_from_elements events_elements, match
     end
 
     def match
@@ -26,44 +25,10 @@ module DataFactory
     end
 
     def events_messages
-      @messages ||= events.map{|event| message_for event}
+      @messages ||= events.map{|event| event.message }
     end
 
     private
-
-    def local_score_for(event)
-      events.select{|e| e.id <= event.id && e.key == match.local_team.id}.count
-    end
-
-    def visitant_score_for(event)
-      events.select{|e| e.id <= event.id && e.key == match.visitant_team.id}.count
-    end
-
-    def event_team(event)
-      match.local_team.id == event.key ? match.local_team : match.visitant_team
-    end
-
-    def score_label(event)
-      "| #{match.local_team.name} (#{local_score_for(event)}) - #{match.visitant_team.name} (#{visitant_score_for(event)})"
-    end
-
-    def message_for(event)
-      team = event_team event
-      player = event.player
-
-      case event.inciid
-      when Event::Goal
-        "Gol de #{team.name} (#{player}) #{score_label(event)}"
-      when Event::OwnGoal
-        "#{player} marca autogol a favor de #{team.name} #{score_label(event)}"
-      when Event::HeadGoal
-        "#{player} marca gol de cabeza para #{team.name} #{score_label(event)}"
-      when Event::FreeKickGoal
-        "#{player} marca gol de tiro libre para #{team.name} #{score_label(event)}"
-      else
-        "#{player} marca gol de penal para #{team.name} #{score_label(event)}"
-      end
-    end
 
     def load_tournament
       Tournament.new(
