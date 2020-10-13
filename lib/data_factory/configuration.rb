@@ -14,7 +14,7 @@ module DataFactory
     def initialize
       @channels = %w(fixture calendario posiciones goleadores ficha plantelxcampeonato)
       @url = 'http://feed.datafactory.la'
-      @password = 'Golazzos'
+      @password = '60l4Zz05'
     end
   end
 end
