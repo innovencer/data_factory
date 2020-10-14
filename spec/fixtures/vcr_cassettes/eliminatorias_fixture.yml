@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://feed.datafactory.la?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=Golazzos
+    uri: http://feed.datafactory.la?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=60l4Zz05
     body:
       encoding: US-ASCII
       string: ''
@@ -1199,11 +1199,11 @@ http_interactions:
         sigla=\"\" nc=\"A. confirmar\" >A confirmar</visitante><golesvisitante></golesvisitante><goleadoresvisitante></goleadoresvisitante><golesDefPenalesvisitante></golesDefPenalesvisitante><medios></medios></partido></fecha></fixture>"
     http_version: '1.1'
     adapter_metadata:
-      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=Golazzos
+      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=60l4Zz05
   recorded_at: Wed, 30 Mar 2016 07:32:45 GMT
 - request:
     method: get
-    uri: http://feed.datafactory.la?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=Golazzos
+    uri: http://feed.datafactory.la?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=60l4Zz05
     body:
       encoding: US-ASCII
       string: ''
@@ -2400,11 +2400,11 @@ http_interactions:
         sigla=\"\" nc=\"A. confirmar\" >A confirmar</visitante><golesvisitante></golesvisitante><goleadoresvisitante></goleadoresvisitante><golesDefPenalesvisitante></golesDefPenalesvisitante><medios></medios></partido></fecha></fixture>"
     http_version: '1.1'
     adapter_metadata:
-      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=Golazzos
+      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=60l4Zz05
   recorded_at: Wed, 30 Mar 2016 07:32:46 GMT
 - request:
     method: get
-    uri: http://feed.datafactory.la?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=Golazzos
+    uri: http://feed.datafactory.la?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=60l4Zz05
     body:
       encoding: US-ASCII
       string: ''
@@ -3601,11 +3601,11 @@ http_interactions:
         sigla=\"\" nc=\"A. confirmar\" >A confirmar</visitante><golesvisitante></golesvisitante><goleadoresvisitante></goleadoresvisitante><golesDefPenalesvisitante></golesDefPenalesvisitante><medios></medios></partido></fecha></fixture>"
     http_version: '1.1'
     adapter_metadata:
-      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=Golazzos
+      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=60l4Zz05
   recorded_at: Wed, 30 Mar 2016 07:32:46 GMT
 - request:
     method: get
-    uri: http://feed.datafactory.la?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=Golazzos
+    uri: http://feed.datafactory.la?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=60l4Zz05
     body:
       encoding: US-ASCII
       string: ''
@@ -4802,6 +4802,6 @@ http_interactions:
         sigla=\"\" nc=\"A. confirmar\" >A confirmar</visitante><golesvisitante></golesvisitante><goleadoresvisitante></goleadoresvisitante><golesDefPenalesvisitante></golesDefPenalesvisitante><medios></medios></partido></fecha></fixture>"
     http_version: '1.1'
     adapter_metadata:
-      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=Golazzos
+      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.eliminatorias.fixture.xml&ppaass=60l4Zz05
   recorded_at: Wed, 30 Mar 2016 07:32:46 GMT
 recorded_with: VCR 3.0.1

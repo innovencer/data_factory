@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://feed.datafactory.la?canal=deportes.futbol.champions.fixture.xml&ppaass=Golazzos
+    uri: http://feed.datafactory.la?canal=deportes.futbol.champions.fixture.xml&ppaass=60l4Zz05
     body:
       encoding: US-ASCII
       string: ''
@@ -2331,6 +2331,6 @@ http_interactions:
         sigla=\"\" nc=\"F. 2\" >Finalista 2</visitante><golesvisitante></golesvisitante><goleadoresvisitante></goleadoresvisitante><golesDefPenalesvisitante></golesDefPenalesvisitante><medios></medios></partido><ganadores></ganadores></fecha></fixture>"
     http_version: '1.1'
     adapter_metadata:
-      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.champions.fixture.xml&ppaass=Golazzos
+      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.champions.fixture.xml&ppaass=60l4Zz05
   recorded_at: Wed, 30 Mar 2016 06:56:13 GMT
 recorded_with: VCR 3.0.1

@@ -51,7 +51,7 @@ module DataFactory
 
     def http_url
       uri = URI 'http://feed.datafactory.la'
-      attrs = {canal: channel, ppaass: 'Golazzos'}
+      attrs = {canal: channel, ppaass: '60l4Zz05'}
       URI::HTTP.build({host: uri.host, path: uri.path, query: attrs.to_query})
     end
 

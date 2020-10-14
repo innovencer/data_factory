@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://feed.datafactory.la?canal=deportes.futbol.eliminatorias.ficha.2381832&ppaass=Golazzos
+    uri: http://feed.datafactory.la?canal=deportes.futbol.eliminatorias.ficha.2381832&ppaass=60l4Zz05
     body:
       encoding: US-ASCII
       string: ''
@@ -99,6 +99,6 @@ http_interactions:
         </ficha>
     http_version: '1.1'
     adapter_metadata:
-      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.eliminatorias.ficha.2381832&ppaass=Golazzos
+      effective_url: http://feed.datafactory.la/?canal=deportes.futbol.eliminatorias.ficha.2381832&ppaass=60l4Zz05
   recorded_at: Thu, 31 Mar 2016 10:56:39 GMT
 recorded_with: VCR 3.0.1

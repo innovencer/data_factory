@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-Getting the list of Filenames of leagues adquired by Golazzos that contains the team info:
+Getting the list of Filenames of leagues adquired by 60l4Zz05 that contains the team info:
 
 ```ruby
 DataFactory::LEAGUES #=> ["deportes.futbol.champions.equipos.xml", "deportes.futbol.colombia.equipos.xml", "deportes.futbol.espana.equipos.xml", "deportes.futbol.libertadores.equipos.xml", "deportes.futbol.mexico.equipos.xml", "deportes.futbol.mundial.equipos.xml", "deportes.futbol.peru.equipos.xml", "deportes.futbol.premierleague.equipos.xml"]
